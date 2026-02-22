@@ -1,21 +1,21 @@
 <div align="center">
 
-  <img src="./public/logo.png" alt="logo" width="90" height="auto">
+  <img src="./public/logo.png" alt="Two Hill Hotel logo" width="90" height="auto">
 
   <h1>Two Hill Hotel - Admin</h1>
 
   <h3>
-    <a href="https://the-wild-oasis-alamin.vercel.app">
-      <strong>Live Site</strong>
+    <a href="https://github.com/TahirMustafa-NO-ONE/Two-Hill_Hotel">
+      <strong>GitHub Repository</strong>
     </a>
   </h3>
 
   <div align="center">
-    <a href="https://the-wild-oasis-alamin.vercel.app">View website</a>
+    <a href="https://github.com/TahirMustafa-NO-ONE/Two-Hill_Hotel">View Repository</a>
     •
-    <a href="https://github.com/CodeWithAlamin/The-Wild-Oasis/issues">Report Bug</a>
+    <a href="https://github.com/TahirMustafa-NO-ONE/Two-Hill_Hotel/issues">Report Bug</a>
     •
-    <a href="https://github.com/CodeWithAlamin/The-Wild-Oasis/pulls">Request Feature</a>
+    <a href="https://github.com/TahirMustafa-NO-ONE/Two-Hill_Hotel/pulls">Request Feature</a>
   </div>
 
   <hr>
@@ -25,32 +25,21 @@
 <!-- Badges -->
 <div align="center">
 
-![Status](https://img.shields.io/badge/Status-Completed-success?style=flat)
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/CodeWithAlamin)
-[![Twitter Follow](https://img.shields.io/twitter/follow/CodeWithAlamin?style=for-the-badge&logo=x)](https://x.com/CodeWithAlamin)
+![Status](https://img.shields.io/badge/Status-Active-success?style=flat)
 
 </div>
 
 <!-- Brief -->
 <p align="center">
-Welcome to <b>Two Hill Hotel</b>! This is a hotel management web app, where hotel employees can manage cabins, bookings, and guests. It uses Supabase as the backend and implements advanced React techniques such as HOCs and React Query.
+Welcome to <b>Two Hill Hotel</b>! This is an internal hotel management web application, where hotel employees can manage cabins, bookings, and guests. It uses Supabase as the backend and implements advanced React techniques such as HOCs and React Query.
 </p>
 
 <!-- Screenshot -->
-<a align="center" href="https://the-wild-oasis-alamin.vercel.app">
+<a align="center" href="#">
 
 ![Screenshot](./public/thumbnail-preview.jpg)
 
 </a>
-
-## Live Site
-
-Check out the live admin app here: [Two Hill Hotel - Admin](https://the-wild-oasis-alamin.vercel.app)
-
-## Customer Version
-
-I also built a **customer version** of this app, where guests can view and book cabins, manage their bookings, and update their profiles. The repository is [here](https://github.com/CodeWithAlamin/The-Wild-Oasis-Booking), and the live site is [here](https://the-wild-oasis-booking-alamin.vercel.app).
 
 ## Key Features
 
@@ -92,7 +81,7 @@ To run this project locally:
 
 1. Clone the repo:
    ```bash
-   git clone https://github.com/CodeWithAlamin/The-Wild-Oasis.git
+   git clone https://github.com/TahirMustafa-NO-ONE/Two-Hill_Hotel.git
    ```
 2. Install dependencies:
    ```bash
@@ -104,18 +93,12 @@ To run this project locally:
    ```bash
    npm run dev
    ```
-5. Open [http://localhost:3000](http://localhost:3000) to see the app.
+5. Open [http://localhost:5173](http://localhost:5173) to see the app.
 
 ## Author
 
-<b>👤 Alamin</b>
+<b>👤 Tahir Mustafa</b>
 
-- LinkedIn - [@CodeWithAlamin](https://www.linkedin.com/in/CodeWithAlamin)
-- Twitter - [@CodeWithAlamin](https://www.twitter.com/CodeWithAlamin)
-- GitHub - [@CodeWithAlamin](https://github.com/CodeWithAlamin)
+- GitHub - [@TahirMustafa-NO-ONE](https://github.com/TahirMustafa-NO-ONE)
 
 Feel free to contact me with any questions or feedback!
-
-## Acknowledgments
-
-This app was developed as part of the [Udemy course](https://www.udemy.com/course/the-ultimate-react-course) by **Jonas Schmedtmann**. Special thanks to Jonas for his excellent teaching and guidance throughout the course.
