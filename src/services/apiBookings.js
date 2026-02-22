@@ -6,6 +6,9 @@ import supabase from "./supabase";
 function transformBooking(booking) {
   if (!booking) return booking;
   
+  // Helper to check if object has actual data (not just empty {})
+  const hasData = (obj) => obj && Object.keys(obj).length > 0;
+  
   return {
     ...booking,
     startDate: booking.startdate,
@@ -19,13 +22,16 @@ function transformBooking(booking) {
     isPaid: booking.ispaid,
     guestId: booking.guestid,
     cabinId: booking.cabinid,
-    guests: booking.guests ? {
+    guests: hasData(booking.guests) ? {
       ...booking.guests,
       fullName: booking.guests.fullname,
       nationalID: booking.guests.nationalid,
-      countryFlag: booking.guests.countryflag
-    } : booking.guests,
-    cabins: booking.cabins
+      countryFlag: booking.guests.countryflag,
+      country: booking.guests.nationality
+    } : null,
+    cabins: hasData(booking.cabins) ? {
+      ...booking.cabins
+    } : null
   };
 }
 

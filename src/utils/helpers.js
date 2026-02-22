@@ -28,3 +28,10 @@ export const formatCurrency = (value) =>
   new Intl.NumberFormat('en', { style: 'currency', currency: 'USD' }).format(
     value
   );
+
+export const fromToday = (numDays) => {
+  const date = new Date();
+  date.setDate(date.getDate() + numDays);
+  date.setUTCHours(0, 0, 0, 0);
+  return date.toISOString();
+};

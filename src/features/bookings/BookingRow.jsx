@@ -47,7 +47,9 @@ const Amount = styled.div`
 `;
 
 function BookingRow({
-  booking: {
+  booking,
+}) {
+  const {
     id: bookingId,
     created_at,
     startDate,
@@ -56,10 +58,14 @@ function BookingRow({
     numGuests,
     totalPrice,
     status,
-    guests: { fullName: guestName, email },
-    cabins: { name: cabinName },
-  },
-}) {
+    guests,
+    cabins,
+  } = booking;
+
+  const guestName = guests?.fullName;
+  const email = guests?.email;
+  const cabinName = cabins?.name;
+
   const navigate = useNavigate();
   const { checkout, isCheckingOut } = useCheckout();
   const { deleteBooking, isDeleting } = useDeleteBooking();
@@ -72,11 +78,11 @@ function BookingRow({
 
   return (
     <Table.Row>
-      <Cabin>{cabinName}</Cabin>
+      <Cabin>{cabinName || 'Unknown Cabin'}</Cabin>
 
       <Stacked>
-        <span>{guestName}</span>
-        <span>{email}</span>
+        <span>{guestName || 'Unknown Guest'}</span>
+        <span>{email || 'No email'}</span>
       </Stacked>
 
       <Stacked>
