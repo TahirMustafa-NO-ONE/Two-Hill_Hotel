@@ -37,7 +37,7 @@ Welcome to <b>Two Hill Hotel</b>! This is an internal hotel management web appli
 <!-- Screenshot -->
 <a align="center" href="#">
 
-![Screenshot](./public/thumbnail-preview.jpg)
+![Screenshot](./public/thumbnail-two-hill-hotel.png)
 
 </a>
 
