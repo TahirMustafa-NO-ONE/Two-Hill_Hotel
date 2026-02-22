@@ -3,6 +3,7 @@ import { isFuture, isPast, isToday } from "date-fns";
 import supabase from "../services/supabase";
 import Button from "../ui/Button";
 import { subtractDates } from "../utils/helpers";
+import toast from "react-hot-toast";
 
 import { bookings } from "./data-bookings";
 import { cabins } from "./data-cabins";
@@ -18,27 +19,47 @@ import { styled } from "styled-components";
 
 async function deleteGuests() {
   const { error } = await supabase.from("guests").delete().gt("id", 0);
-  if (error) console.log(error.message);
+  if (error) {
+    console.error("Error deleting guests:", error);
+    toast.error(`Error deleting guests: ${error.message}`);
+    throw error;
+  }
 }
 
 async function deleteCabins() {
   const { error } = await supabase.from("cabins").delete().gt("id", 0);
-  if (error) console.log(error.message);
+  if (error) {
+    console.error("Error deleting cabins:", error);
+    toast.error(`Error deleting cabins: ${error.message}`);
+    throw error;
+  }
 }
 
 async function deleteBookings() {
   const { error } = await supabase.from("bookings").delete().gt("id", 0);
-  if (error) console.log(error.message);
+  if (error) {
+    console.error("Error deleting bookings:", error);
+    toast.error(`Error deleting bookings: ${error.message}`);
+    throw error;
+  }
 }
 
 async function createGuests() {
   const { error } = await supabase.from("guests").insert(guests);
-  if (error) console.log(error.message);
+  if (error) {
+    console.error("Error creating guests:", error);
+    toast.error(`Error creating guests: ${error.message}`);
+    throw error;
+  }
 }
 
 async function createCabins() {
   const { error } = await supabase.from("cabins").insert(cabins);
-  if (error) console.log(error.message);
+  if (error) {
+    console.error("Error creating cabins:", error);
+    toast.error(`Error creating cabins: ${error.message}`);
+    throw error;
+  }
 }
 
 async function createBookings() {
@@ -58,7 +79,7 @@ async function createBookings() {
     // Here relying on the order of cabins, as they don't have and ID yet
     const cabin = cabins.at(booking.cabinId - 1);
     const numNights = subtractDates(booking.endDate, booking.startDate);
-    const cabinPrice = numNights * (cabin.regularPrice - cabin.discount);
+    const cabinPrice = numNights * (cabin.regularprice - cabin.discount);
     const extrasPrice = booking.hasBreakfast
       ? numNights * 15 * booking.numGuests
       : 0; // hardcoded breakfast price
@@ -84,13 +105,19 @@ async function createBookings() {
       status = "checked-in";
 
     return {
-      ...booking,
-      numNights,
-      cabinPrice,
-      extrasPrice,
-      totalPrice,
-      guestId: allGuestIds.at(booking.guestId - 1),
-      cabinId: allCabinIds.at(booking.cabinId - 1),
+      created_at: booking.created_at,
+      startdate: booking.startDate,
+      enddate: booking.endDate,
+      numnights: numNights,
+      numguests: booking.numGuests,
+      cabinprice: cabinPrice,
+      extrasprice: extrasPrice,
+      totalprice: totalPrice,
+      guestid: allGuestIds.at(booking.guestId - 1),
+      cabinid: allCabinIds.at(booking.cabinId - 1),
+      hasbreakfast: booking.hasBreakfast,
+      ispaid: booking.isPaid,
+      observations: booking.observations,
       status,
     };
   });
@@ -98,7 +125,11 @@ async function createBookings() {
   console.log(finalBookings);
 
   const { error } = await supabase.from("bookings").insert(finalBookings);
-  if (error) console.log(error.message);
+  if (error) {
+    console.error("Error creating bookings:", error);
+    toast.error(`Error creating bookings: ${error.message}`);
+    throw error;
+  }
 }
 
 function Uploader() {
@@ -106,24 +137,47 @@ function Uploader() {
 
   async function uploadAll() {
     setIsLoading(true);
-    // Bookings need to be deleted FIRST
-    await deleteBookings();
-    await deleteGuests();
-    await deleteCabins();
+    try {
+      // Bookings need to be deleted FIRST
+      toast.loading("Deleting old data...");
+      await deleteBookings();
+      await deleteGuests();
+      await deleteCabins();
 
-    // Bookings need to be created LAST
-    await createGuests();
-    await createCabins();
-    await createBookings();
+      toast.loading("Creating guests...");
+      await createGuests();
+      
+      toast.loading("Creating cabins...");
+      await createCabins();
+      
+      toast.loading("Creating bookings...");
+      await createBookings();
 
-    setIsLoading(false);
+      toast.success("✅ All sample data uploaded successfully!");
+    } catch (error) {
+      console.error("Upload failed:", error);
+      toast.error(`Upload failed: ${error.message}`);
+    } finally {
+      setIsLoading(false);
+    }
   }
 
   async function uploadBookings() {
     setIsLoading(true);
-    await deleteBookings();
-    await createBookings();
-    setIsLoading(false);
+    try {
+      toast.loading("Deleting old bookings...");
+      await deleteBookings();
+      
+      toast.loading("Creating new bookings...");
+      await createBookings();
+      
+      toast.success("✅ Bookings uploaded successfully!");
+    } catch (error) {
+      console.error("Upload failed:", error);
+      toast.error(`Upload failed: ${error.message}`);
+    } finally {
+      setIsLoading(false);
+    }
   }
 
   return (

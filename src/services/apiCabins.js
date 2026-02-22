@@ -1,5 +1,16 @@
 import supabase, { supabaseUrl } from "./supabase";
 
+// Transform database lowercase to camelCase for the app
+function transformCabin(cabin) {
+  if (!cabin) return cabin;
+  
+  return {
+    ...cabin,
+    maxCapacity: cabin.maxcapacity,
+    regularPrice: cabin.regularprice
+  };
+}
+
 export async function getCabins() {
   console.log("📞 Calling getCabins API...");
   const { data, error } = await supabase.from("cabins").select("*");
@@ -11,7 +22,7 @@ export async function getCabins() {
     throw new Error("Cabins could not be loaded");
   }
 
-  return data;
+  return data?.map(transformCabin);
 }
 
 export async function createEditCabin(newCabin, id) {
@@ -26,14 +37,24 @@ export async function createEditCabin(newCabin, id) {
     ? newCabin.image
     : `${supabaseUrl}/storage/v1/object/public/cabin-images/${imageName}`;
 
+  // Transform camelCase to lowercase for database
+  const cabinData = {
+    name: newCabin.name,
+    maxcapacity: newCabin.maxCapacity || newCabin.maxcapacity,
+    regularprice: newCabin.regularPrice || newCabin.regularprice,
+    discount: newCabin.discount,
+    description: newCabin.description,
+    image: imagePath
+  };
+
   //1. Create cabin
   let query = supabase.from("cabins");
 
   // A) CREATE
-  if (!id) query = query.insert([{ ...newCabin, image: imagePath }]);
+  if (!id) query = query.insert([cabinData]);
 
   // B) EDIT
-  if (id) query = query.update({ ...newCabin, image: imagePath }).eq("id", id);
+  if (id) query = query.update(cabinData).eq("id", id);
 
   const { data, error } = await query.select().single();
 
@@ -43,7 +64,7 @@ export async function createEditCabin(newCabin, id) {
   }
 
   //2. Upload image
-  if (hasImagePath) return data;
+  if (hasImagePath) return transformCabin(data);
 
   const { error: storageError } = await supabase.storage
     .from("cabin-images")
@@ -58,7 +79,7 @@ export async function createEditCabin(newCabin, id) {
     );
   }
 
-  return data;
+  return transformCabin(data);
 }
 
 export async function deleteCabin(id) {

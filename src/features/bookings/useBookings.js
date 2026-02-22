@@ -16,7 +16,7 @@ export function useBookings() {
   // { field: "totalPrice", value: 5000, method: "gte" };
 
   //SORT
-  const sortByRaw = searchParams.get("sortBy") || "startDate-desc";
+  const sortByRaw = searchParams.get("sortBy") || "startdate-desc";
 
   const [field, direction] = sortByRaw.split("-");
 
@@ -27,7 +27,7 @@ export function useBookings() {
 
   const {
     isLoading,
-    data: { data: bookings, count } = {},
+    data: { data: bookings = [], count = 0 } = {},
     error,
   } = useQuery({
     queryKey: ["bookings", filter, sortBy, page],
