@@ -26,10 +26,10 @@ const Buttons = styled.div`
 
 const PaginationButton = styled.button`
   background-color: ${(props) =>
-    props.active ? " var(--color-brand-600)" : "var(--color-grey-50)"};
-  color: ${(props) => (props.active ? " var(--color-brand-50)" : "inherit")};
-  border: none;
-  border-radius: var(--border-radius-sm);
+    props.active ? " var(--color-brand-500)" : "var(--color-grey-0)"};
+  color: ${(props) => (props.active ? " #1a1208" : "inherit")};
+  border: 1px solid var(--color-grey-200);
+  border-radius: var(--border-radius-md);
   font-weight: 500;
   font-size: 1.4rem;
 
@@ -37,15 +37,15 @@ const PaginationButton = styled.button`
   align-items: center;
   justify-content: center;
   gap: 0.4rem;
-  padding: 0.6rem 1.2rem;
-  transition: all 0.3s;
+  padding: 0.8rem 1.4rem;
+  transition: all 0.2s ease;
 
   &:has(span:last-child) {
-    padding-left: 0.4rem;
+    padding-left: 0.6rem;
   }
 
   &:has(span:first-child) {
-    padding-right: 0.4rem;
+    padding-right: 0.6rem;
   }
 
   & svg {
@@ -54,8 +54,9 @@ const PaginationButton = styled.button`
   }
 
   &:hover:not(:disabled) {
-    background-color: var(--color-brand-600);
-    color: var(--color-brand-50);
+    background-color: var(--color-brand-500);
+    color: #1a1208;
+    border-color: var(--color-brand-500);
   }
 `;
 

@@ -33,12 +33,12 @@ const StyledList = styled.ul`
   position: fixed;
 
   background-color: var(--color-grey-0);
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-lg);
   border-radius: var(--border-radius-md);
+  border: 1px solid var(--color-grey-200);
 
   right: ${(props) => props.position.x}px;
   top: ${(props) => props.position.y}px;
-  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
 `;
 
 const StyledButton = styled.button`
@@ -48,21 +48,25 @@ const StyledButton = styled.button`
   border: none;
   padding: 1.2rem 2.4rem;
   font-size: 1.4rem;
-  transition: all 0.2s;
+  transition: all 0.2s ease;
 
   display: flex;
   align-items: center;
   gap: 1.6rem;
 
   &:hover {
-    background-color: var(--color-grey-50);
+    background-color: var(--color-grey-100);
   }
 
   & svg {
-    width: 1.6rem;
-    height: 1.6rem;
-    color: var(--color-grey-400);
-    transition: all 0.3s;
+    width: 1.8rem;
+    height: 1.8rem;
+    color: var(--color-grey-500);
+    transition: all 0.2s ease;
+  }
+
+  &:hover svg {
+    color: var(--color-brand-500);
   }
 `;
 

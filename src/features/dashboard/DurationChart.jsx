@@ -13,8 +13,9 @@ import { useDarkMode } from "../../context/DarkModeContext";
 const ChartBox = styled.div`
   /* Box */
   background-color: var(--color-grey-0);
-  border: 1px solid var(--color-grey-100);
-  border-radius: var(--border-radius-md);
+  border: 1px solid var(--color-grey-200);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-md);
 
   padding: 2.4rem 3.2rem;
   grid-column: 3 / span 2;
@@ -32,42 +33,42 @@ const startDataLight = [
   {
     duration: "1 night",
     value: 0,
-    color: "#ef4444",
+    color: "#8b6914",
   },
   {
     duration: "2 nights",
     value: 0,
-    color: "#f97316",
+    color: "#b8924a",
   },
   {
     duration: "3 nights",
     value: 0,
-    color: "#eab308",
+    color: "#c9a96e",
   },
   {
     duration: "4-5 nights",
     value: 0,
-    color: "#84cc16",
+    color: "#d4b887",
   },
   {
     duration: "6-7 nights",
     value: 0,
-    color: "#22c55e",
+    color: "#e8c97a",
   },
   {
     duration: "8-14 nights",
     value: 0,
-    color: "#14b8a6",
+    color: "#f0d89b",
   },
   {
     duration: "15-21 nights",
     value: 0,
-    color: "#3b82f6",
+    color: "#a89070",
   },
   {
     duration: "21+ nights",
     value: 0,
-    color: "#a855f7",
+    color: "#6b5b3e",
   },
 ];
 
@@ -75,42 +76,42 @@ const startDataDark = [
   {
     duration: "1 night",
     value: 0,
-    color: "#b91c1c",
+    color: "#6b4f0a",
   },
   {
     duration: "2 nights",
     value: 0,
-    color: "#c2410c",
+    color: "#8b6914",
   },
   {
     duration: "3 nights",
     value: 0,
-    color: "#a16207",
+    color: "#b8924a",
   },
   {
     duration: "4-5 nights",
     value: 0,
-    color: "#4d7c0f",
+    color: "#c9a96e",
   },
   {
     duration: "6-7 nights",
     value: 0,
-    color: "#15803d",
+    color: "#e8c97a",
   },
   {
     duration: "8-14 nights",
     value: 0,
-    color: "#0f766e",
+    color: "#f0d89b",
   },
   {
     duration: "15-21 nights",
     value: 0,
-    color: "#1d4ed8",
+    color: "#a89070",
   },
   {
     duration: "21+ nights",
     value: 0,
-    color: "#7e22ce",
+    color: "#d4c4b0",
   },
 ];
 

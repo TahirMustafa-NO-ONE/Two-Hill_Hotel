@@ -3,15 +3,23 @@ import styled from "styled-components";
 const StyledStat = styled.div`
   /* Box */
   background-color: var(--color-grey-0);
-  border: 1px solid var(--color-grey-100);
-  border-radius: var(--border-radius-md);
+  border: 1px solid var(--color-grey-200);
+  border-top: 3px solid var(--color-brand-500);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-md);
+  transition: all 0.2s ease;
 
-  padding: 1.6rem;
+  padding: 2rem;
   display: grid;
   grid-template-columns: 6.4rem 1fr;
   grid-template-rows: auto auto;
   column-gap: 1.6rem;
   row-gap: 0.4rem;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+  }
 `;
 
 const Icon = styled.div`
@@ -23,28 +31,31 @@ const Icon = styled.div`
   justify-content: center;
 
   /* Make these dynamic, based on the received prop */
-  background-color: var(--color-${(props) => props.color}-100);
+  background-color: rgba(201, 169, 110, 0.15);
 
   & svg {
     width: 3.2rem;
     height: 3.2rem;
-    color: var(--color-${(props) => props.color}-700);
+    color: var(--color-brand-500);
   }
 `;
 
 const Title = styled.h5`
   align-self: end;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   text-transform: uppercase;
-  letter-spacing: 0.4px;
+  letter-spacing: 0.1em;
   font-weight: 600;
   color: var(--color-grey-500);
+  font-family: "Inter", sans-serif;
 `;
 
 const Value = styled.p`
-  font-size: 2.4rem;
+  font-size: 2.8rem;
   line-height: 1;
-  font-weight: 500;
+  font-weight: 700;
+  font-family: "Inter", sans-serif;
+  color: var(--color-grey-700);
 `;
 
 function Stat({ icon, title, value, color }) {

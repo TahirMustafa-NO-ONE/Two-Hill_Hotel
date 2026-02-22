@@ -15,16 +15,17 @@ import { formatDistanceFromNow, formatCurrency } from "../../utils/helpers";
 const StyledBookingDataBox = styled.section`
   /* Box */
   background-color: var(--color-grey-0);
-  border: 1px solid var(--color-grey-100);
-  border-radius: var(--border-radius-md);
+  border: 1px solid var(--color-grey-200);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-md);
 
   overflow: hidden;
 `;
 
 const Header = styled.header`
-  background-color: var(--color-brand-500);
+  background: linear-gradient(135deg, var(--color-brand-500) 0%, var(--color-brand-700) 100%);
   padding: 2rem 4rem;
-  color: #e0e7ff;
+  color: #ffffff;
   font-size: 1.8rem;
   font-weight: 500;
   display: flex;
@@ -45,7 +46,7 @@ const Header = styled.header`
   }
 
   & span {
-    font-family: "Sono";
+    font-family: "Inter", sans-serif;
     font-size: 2rem;
     margin-left: 4px;
   }
@@ -73,7 +74,7 @@ const Price = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 1.6rem 3.2rem;
-  border-radius: var(--border-radius-sm);
+  border-radius: var(--border-radius-md);
   margin-top: 2.4rem;
 
   background-color: ${(props) =>

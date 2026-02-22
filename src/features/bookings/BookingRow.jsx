@@ -20,10 +20,10 @@ import Modal from "../../ui/Modal";
 import ConfirmDelete from "../../ui/ConfirmDelete";
 
 const Cabin = styled.div`
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: 600;
-  color: var(--color-grey-600);
-  font-family: "Sono";
+  color: var(--color-grey-700);
+  font-family: "Inter", sans-serif;
 `;
 
 const Stacked = styled.div`
@@ -42,8 +42,9 @@ const Stacked = styled.div`
 `;
 
 const Amount = styled.div`
-  font-family: "Sono";
-  font-weight: 500;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  color: var(--color-brand-500);
 `;
 
 function BookingRow({

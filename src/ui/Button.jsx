@@ -22,24 +22,25 @@ const sizes = {
 
 const variations = {
   primary: css`
-    color: var(--color-brand-50);
-    background-color: var(--color-brand-600);
+    color: #1a1208;
+    background-color: var(--color-brand-500);
 
     &:hover {
-      background-color: var(--color-brand-700);
+      background-color: var(--color-brand-600);
     }
   `,
   secondary: css`
     color: var(--color-grey-600);
-    background: var(--color-grey-0);
+    background: transparent;
     border: 1px solid var(--color-grey-200);
 
     &:hover {
-      background-color: var(--color-grey-50);
+      background-color: var(--color-grey-100);
+      border-color: var(--color-grey-300);
     }
   `,
   danger: css`
-    color: var(--color-red-100);
+    color: #ffffff;
     background-color: var(--color-red-700);
 
     &:hover {
@@ -50,11 +51,23 @@ const variations = {
 
 export const Button = styled.button`
   border: none;
-  border-radius: var(--border-radius-sm);
+  border-radius: var(--border-radius-md);
   box-shadow: var(--shadow-sm);
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  transition: all 0.2s ease;
 
   ${(props) => sizes[props.size]}
   ${(props) => variations[props.variation]}
+
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
 `;
 
 Button.defaultProps = {

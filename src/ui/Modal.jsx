@@ -10,10 +10,11 @@ const StyledModal = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: var(--color-grey-0);
-  border-radius: var(--border-radius-lg);
+  border-radius: 20px;
   box-shadow: var(--shadow-lg);
   padding: 3.2rem 4rem;
   transition: all 0.5s;
+  border: 1px solid var(--color-grey-200);
 `;
 
 const Overlay = styled.div`
@@ -22,9 +23,8 @@ const Overlay = styled.div`
   left: 0;
   width: 100%;
   height: 100vh;
-  /* background-color: var(--backdrop-color); */
-  background-color: rgba(0, 0, 0, 0.2);
-  /* backdrop-filter: blur(4px); */
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(6px);
   z-index: 1000;
   transition: all 0.5s;
 `;

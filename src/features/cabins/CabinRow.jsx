@@ -23,29 +23,35 @@ import Menus from "../../ui/Menus";
 
 const Img = styled.img`
   display: block;
-  width: 6.4rem;
-  aspect-ratio: 3 / 2;
+  width: 5.6rem;
+  height: 5.6rem;
   object-fit: cover;
   object-position: center;
-  transform: scale(1.5) translateX(-7px);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-sm);
 `;
 
 const Cabin = styled.div`
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: 600;
-  color: var(--color-grey-600);
-  font-family: "Sono";
+  color: var(--color-grey-700);
+  font-family: "Inter", sans-serif;
 `;
 
 const Price = styled.div`
-  font-family: "Sono";
+  font-family: "Inter", sans-serif;
   font-weight: 600;
+  color: var(--color-grey-700);
 `;
 
 const Discount = styled.div`
-  font-family: "Sono";
-  font-weight: 500;
-  color: var(--color-green-700);
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  color: var(--color-brand-500);
+  background-color: var(--color-brand-100);
+  padding: 0.4rem 1rem;
+  border-radius: 50px;
+  display: inline-block;
 `;
 
 function CabinRow({ cabin }) {

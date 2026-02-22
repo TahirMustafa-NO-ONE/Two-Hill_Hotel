@@ -12,16 +12,22 @@ const StyledTodayItem = styled.li`
   align-items: center;
 
   font-size: 1.4rem;
-  padding: 0.8rem 0;
-  border-bottom: 1px solid var(--color-grey-100);
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--color-grey-200);
 
   &:first-child {
-    border-top: 1px solid var(--color-grey-100);
+    border-top: 1px solid var(--color-grey-200);
+  }
+
+  &:last-child {
+    border-bottom: none;
   }
 `;
 
 const Guest = styled.div`
-  font-weight: 500;
+  font-weight: 600;
+  font-family: "Inter", sans-serif;
+  color: var(--color-grey-700);
 `;
 
 function TodayItem({ activity }) {

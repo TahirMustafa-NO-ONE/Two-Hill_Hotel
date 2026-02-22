@@ -6,8 +6,9 @@ const StyledTable = styled.div`
 
   font-size: 1.4rem;
   background-color: var(--color-grey-0);
-  border-radius: 7px;
+  border-radius: var(--border-radius-lg);
   overflow: hidden;
+  box-shadow: var(--shadow-md);
 `;
 
 const CommonRow = styled.div`
@@ -22,18 +23,28 @@ const StyledHeader = styled(CommonRow)`
   padding: 1.6rem 2.4rem;
 
   background-color: var(--color-grey-50);
-  border-bottom: 1px solid var(--color-grey-100);
+  border-bottom: 1px solid var(--color-grey-200);
   text-transform: uppercase;
-  letter-spacing: 0.4px;
+  letter-spacing: 0.1em;
   font-weight: 600;
-  color: var(--color-grey-600);
+  font-size: 1.2rem;
+  color: var(--color-grey-500);
 `;
 
 const StyledRow = styled(CommonRow)`
-  padding: 1.2rem 2.4rem;
+  padding: 1.6rem 2.4rem;
+  transition: all 0.2s ease;
 
   &:not(:last-child) {
     border-bottom: 1px solid var(--color-grey-100);
+  }
+
+  &:nth-child(even) {
+    background-color: var(--color-grey-50);
+  }
+
+  &:hover {
+    background-color: rgba(201, 169, 110, 0.1);
   }
 `;
 

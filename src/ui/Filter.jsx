@@ -2,10 +2,10 @@ import { useSearchParams } from "react-router-dom";
 import styled, { css } from "styled-components";
 
 const StyledFilter = styled.div`
-  border: 1px solid var(--color-grey-100);
+  border: 1px solid var(--color-grey-200);
   background-color: var(--color-grey-0);
   box-shadow: var(--shadow-sm);
-  border-radius: var(--border-radius-sm);
+  border-radius: 50px;
   padding: 0.4rem;
   display: flex;
   gap: 0.4rem;
@@ -18,20 +18,20 @@ const FilterButton = styled.button`
   ${(props) =>
     props.active === "true" &&
     css`
-      background-color: var(--color-brand-600);
-      color: var(--color-brand-50);
+      background-color: var(--color-brand-500);
+      color: #1a1208;
     `}
 
-  border-radius: var(--border-radius-sm);
+  border-radius: 50px;
   font-weight: 500;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   /* To give the same height as select */
-  padding: 0.44rem 0.8rem;
-  transition: all 0.3s;
+  padding: 0.6rem 1.2rem;
+  transition: all 0.2s ease;
 
   &:hover:not(:disabled) {
-    background-color: var(--color-brand-600);
-    color: var(--color-brand-50);
+    background-color: var(--color-brand-500);
+    color: #1a1208;
   }
 `;
 

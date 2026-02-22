@@ -1,10 +1,12 @@
 import styled, { css } from "styled-components";
 
 const Heading = styled.h1`
+  font-family: "Playfair Display", serif;
+  
   ${(props) =>
     props.as === "h1" &&
     css`
-      font-size: 3rem;
+      font-size: 3.2rem;
       font-weight: 600;
     `}
 
@@ -31,6 +33,7 @@ const Heading = styled.h1`
     `}
 
   line-height: 1.3;
+  color: var(--color-grey-700);
 `;
 
 export default Heading;

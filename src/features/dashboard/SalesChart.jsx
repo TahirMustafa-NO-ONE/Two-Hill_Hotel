@@ -19,7 +19,8 @@ const StyledSalesChart = styled(DashboardBox)`
   /* Hack to change grid line colors */
   & .recharts-cartesian-grid-horizontal line,
   & .recharts-cartesian-grid-vertical line {
-    stroke: var(--color-grey-300);
+    stroke: var(--color-grey-200);
+    opacity: 0.5;
   }
 `;
 
@@ -46,16 +47,16 @@ function SalesChart({ bookings, numDays }) {
 
   const colors = isDarkMode
     ? {
-        totalSales: { stroke: "#4f46e5", fill: "#4f46e5" },
-        extrasSales: { stroke: "#22c55e", fill: "#22c55e" },
-        text: "#e5e7eb",
-        background: "#18212f",
+        totalSales: { stroke: "#c9a96e", fill: "#c9a96e" },
+        extrasSales: { stroke: "#e8c97a", fill: "#e8c97a" },
+        text: "#f5ede0",
+        background: "#1e1a16",
       }
     : {
-        totalSales: { stroke: "#4f46e5", fill: "#c7d2fe" },
-        extrasSales: { stroke: "#16a34a", fill: "#dcfce7" },
-        text: "#374151",
-        background: "#fff",
+        totalSales: { stroke: "#8b6914", fill: "#c9a96e" },
+        extrasSales: { stroke: "#b8924a", fill: "#e8c97a" },
+        text: "#1a1208",
+        background: "#ffffff",
       };
 
   return (
