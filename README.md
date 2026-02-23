@@ -54,6 +54,9 @@ Welcome to <b>The Hill Hotel</b>! This is an internal hotel management web appli
 ### Cabins Management
 ![Cabins Page](./public/the-hill-hotel-cabins.png)
 
+### Check in Booking
+![Cabins Page](./public/the-hill-hotel-checkin.png)
+
 </div>
 
 ## Key Features
