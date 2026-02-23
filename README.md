@@ -41,6 +41,21 @@ Welcome to <b>Two Hill Hotel</b>! This is an internal hotel management web appli
 
 </a>
 
+## Screenshots
+
+<div align="center">
+
+### Bookings Management
+![Bookings Page](./public/screenshot-bookings.png)
+
+### Dashboard & Analytics
+![Dashboard](./public/screenshot-dashboard.png)
+
+### Cabins Management
+![Cabins Page](./public/screenshot-cabins.png)
+
+</div>
+
 ## Key Features
 
 - User authentication ensures that only hotel employees can access the system.
