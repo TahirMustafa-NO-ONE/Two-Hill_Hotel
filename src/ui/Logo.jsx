@@ -20,7 +20,7 @@ function Logo() {
 
   return (
     <StyledLogo>
-      <Img src={src} alt="Two Hill Hotel logo" />
+      <Img src={src} alt="The Hill Hotel logo" />
     </StyledLogo>
   );
 }

@@ -1,21 +1,21 @@
 <div align="center">
 
-  <img src="./public/logo.png" alt="Two Hill Hotel logo" width="90" height="auto">
+  <img src="./public/logo.png" alt="The Hill Hotel logo" width="90" height="auto">
 
-  <h1>Two Hill Hotel - Admin</h1>
+  <h1>The Hill Hotel - Admin</h1>
 
   <h3>
-    <a href="https://github.com/TahirMustafa-NO-ONE/Two-Hill_Hotel">
+    <a href="https://github.com/TahirMustafa-NO-ONE/The-Hill-Hotel">
       <strong>GitHub Repository</strong>
     </a>
   </h3>
 
   <div align="center">
-    <a href="https://github.com/TahirMustafa-NO-ONE/Two-Hill_Hotel">View Repository</a>
+    <a href="https://github.com/TahirMustafa-NO-ONE/The-Hill-Hotel">View Repository</a>
     •
-    <a href="https://github.com/TahirMustafa-NO-ONE/Two-Hill_Hotel/issues">Report Bug</a>
+    <a href="https://github.com/TahirMustafa-NO-ONE/The-Hill-Hotel/issues">Report Bug</a>
     •
-    <a href="https://github.com/TahirMustafa-NO-ONE/Two-Hill_Hotel/pulls">Request Feature</a>
+    <a href="https://github.com/TahirMustafa-NO-ONE/The-Hill-Hotel/pulls">Request Feature</a>
   </div>
 
   <hr>
@@ -31,13 +31,13 @@
 
 <!-- Brief -->
 <p align="center">
-Welcome to <b>Two Hill Hotel</b>! This is an internal hotel management web application, where hotel employees can manage cabins, bookings, and guests. It uses Supabase as the backend and implements advanced React techniques such as HOCs and React Query.
+Welcome to <b>The Hill Hotel</b>! This is an internal hotel management web application, where hotel employees can manage cabins, bookings, and guests. It uses Supabase as the backend and implements advanced React techniques such as HOCs and React Query.
 </p>
 
 <!-- Screenshot -->
 <a align="center" href="#">
 
-![Screenshot](./public/thumbnail-two-hill-hotel.png)
+![Screenshot](./public/thumbnail-the-hill-hotel.png)
 
 </a>
 
@@ -46,13 +46,13 @@ Welcome to <b>Two Hill Hotel</b>! This is an internal hotel management web appli
 <div align="center">
 
 ### Dashboard & Analytics
-![Dashboard](./public/two-hill-hotel-dashboard.png)
+![Dashboard](./public/the-hill-hotel-dashboard.png)
 
 ### Bookings Management
-![Bookings Page](./public/two-hill-hotel-bookings.png)
+![Bookings Page](./public/the-hill-hotel-bookings.png)
 
 ### Cabins Management
-![Cabins Page](./public/two-hill-hotel-cabins.png)
+![Cabins Page](./public/the-hill-hotel-cabins.png)
 
 </div>
 
@@ -96,7 +96,7 @@ To run this project locally:
 
 1. Clone the repo:
    ```bash
-   git clone https://github.com/TahirMustafa-NO-ONE/Two-Hill_Hotel.git
+   git clone https://github.com/TahirMustafa-NO-ONE/The-Hill-Hotel.git
    ```
 2. Install dependencies:
    ```bash

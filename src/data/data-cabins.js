@@ -70,7 +70,7 @@ export const cabins = [
     regularprice: 420,
     discount: 0,
     description:
-      "The crown jewel of Two Hill Hotel, the Two Peaks Penthouse commands awe-inspiring views of both hilltops from its private rooftop terrace. Featuring four bedrooms, a gourmet kitchen, a home theatre setup, and a dedicated butler service, this suite redefines luxury accommodation.",
+      "The crown jewel of The Hill Hotel, the Two Peaks Penthouse commands awe-inspiring views of both hilltops from its private rooftop terrace. Featuring four bedrooms, a gourmet kitchen, a home theatre setup, and a dedicated butler service, this suite redefines luxury accommodation.",
     image: imageUrl + "cabin-007.jpg",
   },
   {

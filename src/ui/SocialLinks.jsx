@@ -29,7 +29,7 @@ function SocialLinks() {
     <StyledSocialLinks>
       <li>
         <a
-          href="https://github.com/TahirMustafa-NO-ONE/Two-Hill_Hotel"
+          href="https://github.com/TahirMustafa-NO-ONE/The-Hill-Hotel"
           target="_blank"
           rel="noopener noreferrer"
         >
