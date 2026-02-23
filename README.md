@@ -45,14 +45,14 @@ Welcome to <b>Two Hill Hotel</b>! This is an internal hotel management web appli
 
 <div align="center">
 
-### Bookings Management
-![Bookings Page](./public/screenshot-bookings.png)
-
 ### Dashboard & Analytics
-![Dashboard](./public/screenshot-dashboard.png)
+![Dashboard](./public/two-hill-hotel-dashboard.png)
+
+### Bookings Management
+![Bookings Page](./public/two-hill-hotel-bookings.png)
 
 ### Cabins Management
-![Cabins Page](./public/screenshot-cabins.png)
+![Cabins Page](./public/two-hill-hotel-cabins.png)
 
 </div>
 
