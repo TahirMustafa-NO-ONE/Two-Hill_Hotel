@@ -74,7 +74,7 @@ Welcome to <b>The Hill Hotel</b>! This is an internal hotel management web appli
 
 - **React** for the frontend.
 - **Supabase** for the database and real-time data updates.
-- **React Query** for data fetching and caching.
+- **React Query - TanStack** for data fetching and caching.
 - **React Router** for navigation.
 - **React Hook Form** for efficient form handling.
 - **Recharts** for data visualization (charts and stats).
